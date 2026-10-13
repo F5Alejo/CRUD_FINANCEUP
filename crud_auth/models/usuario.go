@@ -17,7 +17,7 @@ type Usuario struct {
 	Apellido                string         `orm:"column(apellido)"`
 	Email                   string         `orm:"column(email)"`
 	Telefono                string         `orm:"column(telefono);null"`
-	Cedula                  string         `orm:"column(cedula);null"`
+	Cedula                  *string        `orm:"column(cedula);null"` // puntero: si no llega se guarda NULL (la columna es UNIQUE)
 	Ciudad                  string         `orm:"column(ciudad);null"`
 	Direccion               string         `orm:"column(direccion);null"`
 	FechaNacimiento         time.Time      `orm:"column(fecha_nacimiento);type(date);null"`
