@@ -11,15 +11,25 @@ import (
 )
 
 type ModuloEducativo struct {
-	Id                int       `orm:"column(id_modulo);pk;auto"`
-	Titulo            string    `orm:"column(titulo)"`
-	Descripcion       string    `orm:"column(descripcion);null"`
-	Contenido         string    `orm:"column(contenido);null"`
-	Nivel             string    `orm:"column(nivel)"`
-	UrlThumbnail      string    `orm:"column(url_thumbnail);null"`
-	Activo            bool      `orm:"column(activo)"`
-	FechaCreacion     time.Time `orm:"column(fecha_creacion);type(timestamp without time zone);auto_now_add"`
-	FechaModificacion time.Time `orm:"column(fecha_modificacion);type(timestamp without time zone);auto_now"`
+	Id                int         `orm:"column(id_modulo);pk;auto"`
+	IdEscuela         *Escuela    `orm:"column(id_escuela);rel(fk);null"`
+	IdInstructor      *Instructor `orm:"column(id_instructor);rel(fk);null"`
+	Slug              string      `orm:"column(slug);null"`
+	Titulo            string      `orm:"column(titulo)"`
+	Descripcion       string      `orm:"column(descripcion);null"`
+	Contenido         string      `orm:"column(contenido);null"`
+	Nivel             string      `orm:"column(nivel)"`
+	Categoria         string      `orm:"column(categoria);null"`
+	Formato           string      `orm:"column(formato)"`
+	Duracion          string      `orm:"column(duracion);null"`
+	ResumenLecciones  string      `orm:"column(resumen_lecciones);null"`
+	OtorgaCertificado bool        `orm:"column(otorga_certificado)"`
+	Estudiantes       int         `orm:"column(estudiantes)"`
+	Calificacion      float64     `orm:"column(calificacion);null"`
+	UrlThumbnail      string      `orm:"column(url_thumbnail);null"`
+	Activo            bool        `orm:"column(activo)"`
+	FechaCreacion     time.Time   `orm:"column(fecha_creacion);type(timestamp without time zone);auto_now_add"`
+	FechaModificacion time.Time   `orm:"column(fecha_modificacion);type(timestamp without time zone);auto_now"`
 }
 
 func (t *ModuloEducativo) TableName() string {

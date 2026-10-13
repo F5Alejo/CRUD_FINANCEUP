@@ -384,6 +384,131 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
+  /historial_inversion/:
+    get:
+      tags:
+      - historial_inversion
+      description: |-
+        get HistorialInversion
+        <br>
+      operationId: HistorialInversionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.HistorialInversion'
+        "403":
+          description: ""
+    post:
+      tags:
+      - historial_inversion
+      description: |-
+        create HistorialInversion
+        <br>
+      operationId: HistorialInversionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for HistorialInversion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.HistorialInversion'
+      responses:
+        "201":
+          description: '{int} models.HistorialInversion'
+        "403":
+          description: body is empty
+  /historial_inversion/{id}:
+    get:
+      tags:
+      - historial_inversion
+      description: |-
+        get HistorialInversion by id
+        <br>
+      operationId: HistorialInversionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.HistorialInversion'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - historial_inversion
+      description: |-
+        update the HistorialInversion
+        <br>
+      operationId: HistorialInversionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for HistorialInversion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.HistorialInversion'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.HistorialInversion'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - historial_inversion
+      description: |-
+        delete the HistorialInversion
+        <br>
+      operationId: HistorialInversionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
   /inversion/:
     get:
       tags:
@@ -1774,6 +1899,8 @@ definitions:
       FechaModificacion:
         type: string
         format: datetime
+      Icono:
+        type: string
       Id:
         type: integer
         format: int64
@@ -1844,12 +1971,37 @@ definitions:
       MontoPresupuesto:
         type: number
         format: double
+  models.HistorialInversion:
+    title: HistorialInversion
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      Fecha:
+        type: string
+        format: datetime
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      IdInversion:
+        $ref: '#/definitions/models.Inversion'
+      Valor:
+        type: number
+        format: double
   models.Inversion:
     title: Inversion
     type: object
     properties:
       Activo:
         type: boolean
+      Duracion:
+        type: string
       FechaCreacion:
         type: string
         format: datetime
@@ -1879,6 +2031,9 @@ definitions:
         format: double
       Nombre:
         type: string
+      Rendimiento:
+        type: number
+        format: double
       Rentabilidad:
         type: number
         format: double
@@ -2131,42 +2286,45 @@ tags:
 - name: inversion
   description: |
     InversionController operations for Inversion
-- name: editar_meta
-  description: |
-    EditarMetaController operations for EditarMeta
-- name: meta
-  description: |
-    MetaController operations for Meta
-- name: solicitud_consolidacion
-  description: |
-    SolicitudConsolidacionController operations for SolicitudConsolidacion
-- name: categoria
-  description: |
-    CategoriaController operations for Categoria
-- name: tipo_ingreso
-  description: |
-    TipoIngresoController operations for TipoIngreso
-- name: finanzas
-  description: |
-    FinanzasController operations for Finanzas
-- name: nivel_riesgo
-  description: |
-    NivelRiesgoController operations for NivelRiesgo
 - name: movimiento_inversion
   description: |
     MovimientoInversionController operations for MovimientoInversion
-- name: tipo_ingreso_inversion
+- name: nivel_riesgo
   description: |
-    TipoIngresoInversionController operations for TipoIngresoInversion
-- name: movimiento_meta
+    NivelRiesgoController operations for NivelRiesgo
+- name: editar_meta
   description: |
-    MovimientoMetaController operations for MovimientoMeta
-- name: tipo_ingreso_meta
-  description: |
-    TipoIngresoMetaController operations for TipoIngresoMeta
-- name: movimiento_ingreso_egreso
-  description: |
-    MovimientoIngresoEgresoController operations for MovimientoIngresoEgreso
+    EditarMetaController operations for EditarMeta
 - name: tipo_inversion
   description: |
     TipoInversionController operations for TipoInversion
+- name: categoria
+  description: |
+    CategoriaController operations for Categoria
+- name: finanzas
+  description: |
+    FinanzasController operations for Finanzas
+- name: meta
+  description: |
+    MetaController operations for Meta
+- name: movimiento_ingreso_egreso
+  description: |
+    MovimientoIngresoEgresoController operations for MovimientoIngresoEgreso
+- name: movimiento_meta
+  description: |
+    MovimientoMetaController operations for MovimientoMeta
+- name: solicitud_consolidacion
+  description: |
+    SolicitudConsolidacionController operations for SolicitudConsolidacion
+- name: tipo_ingreso
+  description: |
+    TipoIngresoController operations for TipoIngreso
+- name: historial_inversion
+  description: |
+    HistorialInversionController operations for HistorialInversion
+- name: tipo_ingreso_inversion
+  description: |
+    TipoIngresoInversionController operations for TipoIngresoInversion
+- name: tipo_ingreso_meta
+  description: |
+    TipoIngresoMetaController operations for TipoIngresoMeta

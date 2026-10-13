@@ -12,6 +12,179 @@
     },
     "basePath": "/v1",
     "paths": {
+        "/certificado/": {
+            "get": {
+                "tags": [
+                    "certificado"
+                ],
+                "description": "get Certificado\n\u003cbr\u003e",
+                "operationId": "CertificadoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Certificado"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "certificado"
+                ],
+                "description": "create Certificado\n\u003cbr\u003e",
+                "operationId": "CertificadoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Certificado content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Certificado"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Certificado"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/certificado/{id}": {
+            "get": {
+                "tags": [
+                    "certificado"
+                ],
+                "description": "get Certificado by id\n\u003cbr\u003e",
+                "operationId": "CertificadoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Certificado"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "certificado"
+                ],
+                "description": "update the Certificado\n\u003cbr\u003e",
+                "operationId": "CertificadoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Certificado content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Certificado"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Certificado"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "certificado"
+                ],
+                "description": "delete the Certificado\n\u003cbr\u003e",
+                "operationId": "CertificadoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
         "/contenido/": {
             "get": {
                 "tags": [
@@ -185,6 +358,352 @@
                 }
             }
         },
+        "/escuela/": {
+            "get": {
+                "tags": [
+                    "escuela"
+                ],
+                "description": "get Escuela\n\u003cbr\u003e",
+                "operationId": "EscuelaController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Escuela"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "escuela"
+                ],
+                "description": "create Escuela\n\u003cbr\u003e",
+                "operationId": "EscuelaController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Escuela content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Escuela"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Escuela"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/escuela/{id}": {
+            "get": {
+                "tags": [
+                    "escuela"
+                ],
+                "description": "get Escuela by id\n\u003cbr\u003e",
+                "operationId": "EscuelaController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Escuela"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "escuela"
+                ],
+                "description": "update the Escuela\n\u003cbr\u003e",
+                "operationId": "EscuelaController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Escuela content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Escuela"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Escuela"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "escuela"
+                ],
+                "description": "delete the Escuela\n\u003cbr\u003e",
+                "operationId": "EscuelaController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/instructor/": {
+            "get": {
+                "tags": [
+                    "instructor"
+                ],
+                "description": "get Instructor\n\u003cbr\u003e",
+                "operationId": "InstructorController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Instructor"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "instructor"
+                ],
+                "description": "create Instructor\n\u003cbr\u003e",
+                "operationId": "InstructorController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Instructor content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Instructor"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Instructor"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/instructor/{id}": {
+            "get": {
+                "tags": [
+                    "instructor"
+                ],
+                "description": "get Instructor by id\n\u003cbr\u003e",
+                "operationId": "InstructorController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Instructor"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "instructor"
+                ],
+                "description": "update the Instructor\n\u003cbr\u003e",
+                "operationId": "InstructorController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Instructor content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Instructor"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Instructor"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "instructor"
+                ],
+                "description": "delete the Instructor\n\u003cbr\u003e",
+                "operationId": "InstructorController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
         "/leccion/": {
             "get": {
                 "tags": [
@@ -339,6 +858,179 @@
                 ],
                 "description": "delete the Leccion\n\u003cbr\u003e",
                 "operationId": "LeccionController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/modulo_detalle/": {
+            "get": {
+                "tags": [
+                    "modulo_detalle"
+                ],
+                "description": "get ModuloDetalle\n\u003cbr\u003e",
+                "operationId": "ModuloDetalleController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ModuloDetalle"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "modulo_detalle"
+                ],
+                "description": "create ModuloDetalle\n\u003cbr\u003e",
+                "operationId": "ModuloDetalleController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for ModuloDetalle content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.ModuloDetalle"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.ModuloDetalle"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/modulo_detalle/{id}": {
+            "get": {
+                "tags": [
+                    "modulo_detalle"
+                ],
+                "description": "get ModuloDetalle by id\n\u003cbr\u003e",
+                "operationId": "ModuloDetalleController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ModuloDetalle"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "modulo_detalle"
+                ],
+                "description": "update the ModuloDetalle\n\u003cbr\u003e",
+                "operationId": "ModuloDetalleController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for ModuloDetalle content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.ModuloDetalle"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ModuloDetalle"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "modulo_detalle"
+                ],
+                "description": "delete the ModuloDetalle\n\u003cbr\u003e",
+                "operationId": "ModuloDetalleController.Delete",
                 "parameters": [
                     {
                         "in": "path",
@@ -879,6 +1571,41 @@
         }
     },
     "definitions": {
+        "models.Certificado": {
+            "title": "Certificado",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "CodigoVerificacion": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "FechaEmision": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "FechaModificacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "IdModulo": {
+                    "$ref": "#/definitions/models.ModuloEducativo"
+                },
+                "IdUsuario": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
         "models.Contenido": {
             "title": "Contenido",
             "type": "object",
@@ -909,6 +1636,70 @@
                     "type": "string"
                 },
                 "UrlVideo": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Escuela": {
+            "title": "Escuela",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "Descripcion": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "FechaModificacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                },
+                "Orden": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Slug": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Instructor": {
+            "title": "Instructor",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "Cargo": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "FechaModificacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Iniciales": {
+                    "type": "string"
+                },
+                "Nombre": {
                     "type": "string"
                 }
             }
@@ -949,6 +1740,12 @@
                     "type": "integer",
                     "format": "int64"
                 },
+                "Slug": {
+                    "type": "string"
+                },
+                "Tipo": {
+                    "type": "string"
+                },
                 "Titulo": {
                     "type": "string"
                 },
@@ -957,18 +1754,12 @@
                 }
             }
         },
-        "models.ModuloEducativo": {
-            "title": "ModuloEducativo",
+        "models.ModuloDetalle": {
+            "title": "ModuloDetalle",
             "type": "object",
             "properties": {
                 "Activo": {
                     "type": "boolean"
-                },
-                "Contenido": {
-                    "type": "string"
-                },
-                "Descripcion": {
-                    "type": "string"
                 },
                 "FechaCreacion": {
                     "type": "string",
@@ -982,7 +1773,79 @@
                     "type": "integer",
                     "format": "int64"
                 },
+                "IdModulo": {
+                    "$ref": "#/definitions/models.ModuloEducativo"
+                },
+                "Orden": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Texto": {
+                    "type": "string"
+                },
+                "Tipo": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.ModuloEducativo": {
+            "title": "ModuloEducativo",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "Calificacion": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "Categoria": {
+                    "type": "string"
+                },
+                "Contenido": {
+                    "type": "string"
+                },
+                "Descripcion": {
+                    "type": "string"
+                },
+                "Duracion": {
+                    "type": "string"
+                },
+                "Estudiantes": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "FechaCreacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "FechaModificacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "Formato": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "IdEscuela": {
+                    "$ref": "#/definitions/models.Escuela"
+                },
+                "IdInstructor": {
+                    "$ref": "#/definitions/models.Instructor"
+                },
                 "Nivel": {
+                    "type": "string"
+                },
+                "OtorgaCertificado": {
+                    "type": "boolean"
+                },
+                "ResumenLecciones": {
+                    "type": "string"
+                },
+                "Slug": {
                     "type": "string"
                 },
                 "Titulo": {
@@ -1079,16 +1942,28 @@
     },
     "tags": [
         {
-            "name": "modulo_educativo",
-            "description": "ModuloEducativoController operations for ModuloEducativo\n"
+            "name": "escuela",
+            "description": "EscuelaController operations for Escuela\n"
         },
         {
-            "name": "contenido",
-            "description": "ContenidoController operations for Contenido\n"
+            "name": "instructor",
+            "description": "InstructorController operations for Instructor\n"
         },
         {
             "name": "leccion",
             "description": "LeccionController operations for Leccion\n"
+        },
+        {
+            "name": "modulo_detalle",
+            "description": "ModuloDetalleController operations for ModuloDetalle\n"
+        },
+        {
+            "name": "certificado",
+            "description": "CertificadoController operations for Certificado\n"
+        },
+        {
+            "name": "modulo_educativo",
+            "description": "ModuloEducativoController operations for ModuloEducativo\n"
         },
         {
             "name": "progreso_educativo",
@@ -1097,6 +1972,10 @@
         {
             "name": "progreso_leccion",
             "description": "ProgresoLeccionController operations for ProgresoLeccion\n"
+        },
+        {
+            "name": "contenido",
+            "description": "ContenidoController operations for Contenido\n"
         }
     ]
 }

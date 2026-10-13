@@ -134,6 +134,131 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
+  /codigo_verificacion/:
+    get:
+      tags:
+      - codigo_verificacion
+      description: |-
+        get CodigoVerificacion
+        <br>
+      operationId: CodigoVerificacionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.CodigoVerificacion'
+        "403":
+          description: ""
+    post:
+      tags:
+      - codigo_verificacion
+      description: |-
+        create CodigoVerificacion
+        <br>
+      operationId: CodigoVerificacionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for CodigoVerificacion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.CodigoVerificacion'
+      responses:
+        "201":
+          description: '{int} models.CodigoVerificacion'
+        "403":
+          description: body is empty
+  /codigo_verificacion/{id}:
+    get:
+      tags:
+      - codigo_verificacion
+      description: |-
+        get CodigoVerificacion by id
+        <br>
+      operationId: CodigoVerificacionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.CodigoVerificacion'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - codigo_verificacion
+      description: |-
+        update the CodigoVerificacion
+        <br>
+      operationId: CodigoVerificacionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for CodigoVerificacion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.CodigoVerificacion'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.CodigoVerificacion'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - codigo_verificacion
+      description: |-
+        delete the CodigoVerificacion
+        <br>
+      operationId: CodigoVerificacionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
   /credencial/:
     get:
       tags:
@@ -248,6 +373,131 @@ paths:
         delete the Credencial
         <br>
       operationId: CredencialController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /cuenta_social/:
+    get:
+      tags:
+      - cuenta_social
+      description: |-
+        get CuentaSocial
+        <br>
+      operationId: CuentaSocialController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.CuentaSocial'
+        "403":
+          description: ""
+    post:
+      tags:
+      - cuenta_social
+      description: |-
+        create CuentaSocial
+        <br>
+      operationId: CuentaSocialController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for CuentaSocial content
+        required: true
+        schema:
+          $ref: '#/definitions/models.CuentaSocial'
+      responses:
+        "201":
+          description: '{int} models.CuentaSocial'
+        "403":
+          description: body is empty
+  /cuenta_social/{id}:
+    get:
+      tags:
+      - cuenta_social
+      description: |-
+        get CuentaSocial by id
+        <br>
+      operationId: CuentaSocialController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.CuentaSocial'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - cuenta_social
+      description: |-
+        update the CuentaSocial
+        <br>
+      operationId: CuentaSocialController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for CuentaSocial content
+        required: true
+        schema:
+          $ref: '#/definitions/models.CuentaSocial'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.CuentaSocial'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - cuenta_social
+      description: |-
+        delete the CuentaSocial
+        <br>
+      operationId: CuentaSocialController.Delete
       parameters:
       - in: path
         name: id
@@ -783,6 +1033,38 @@ definitions:
         type: string
       TipoEvento:
         type: string
+  models.CodigoVerificacion:
+    title: CodigoVerificacion
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      Canal:
+        type: string
+      CodigoHash:
+        type: string
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaExpiracion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      FechaUso:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      IdUsuario:
+        $ref: '#/definitions/models.Usuario'
+      Intentos:
+        type: integer
+        format: int64
+      Proposito:
+        type: string
   models.Credencial:
     title: Credencial
     type: object
@@ -819,6 +1101,32 @@ definitions:
       RequiereCambio:
         type: boolean
       Salt:
+        type: string
+  models.CuentaSocial:
+    title: CuentaSocial
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      EmailProveedor:
+        type: string
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      FechaVinculacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      IdExterno:
+        type: string
+      IdUsuario:
+        $ref: '#/definitions/models.Usuario'
+      Proveedor:
         type: string
   models.Rol:
     title: Rol
@@ -862,6 +1170,8 @@ definitions:
     title: Usuario
     type: object
     properties:
+      AceptaTerminos:
+        type: boolean
       Activo:
         type: boolean
       Apellido:
@@ -876,6 +1186,9 @@ definitions:
         type: string
       Estado:
         type: string
+      FechaAceptacionTerminos:
+        type: string
+        format: datetime
       FechaCreacion:
         type: string
         format: datetime
@@ -923,21 +1236,27 @@ definitions:
       IdUsuario:
         $ref: '#/definitions/models.Usuario'
 tags:
+- name: usuario
+  description: |
+    UsuarioController operations for Usuario
+- name: usuario_rol
+  description: |
+    UsuarioRolController operations for UsuarioRol
 - name: auditoria_login
   description: |
     AuditoriaLoginController operations for AuditoriaLogin
+- name: codigo_verificacion
+  description: |
+    CodigoVerificacionController operations for CodigoVerificacion
+- name: credencial
+  description: |
+    CredencialController operations for Credencial
+- name: cuenta_social
+  description: |
+    CuentaSocialController operations for CuentaSocial
 - name: rol
   description: |
     RolController operations for Rol
 - name: tipo_documento
   description: |
     TipoDocumentoController operations for TipoDocumento
-- name: usuario
-  description: |
-    UsuarioController operations for Usuario
-- name: credencial
-  description: |
-    CredencialController operations for Credencial
-- name: usuario_rol
-  description: |
-    UsuarioRolController operations for UsuarioRol

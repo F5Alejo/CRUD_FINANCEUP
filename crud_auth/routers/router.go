@@ -14,9 +14,39 @@ import (
 func init() {
 	ns := beego.NewNamespace("/v1",
 
+		beego.NSNamespace("/usuario",
+			beego.NSInclude(
+				&controllers.UsuarioController{},
+			),
+		),
+
+		beego.NSNamespace("/usuario_rol",
+			beego.NSInclude(
+				&controllers.UsuarioRolController{},
+			),
+		),
+
 		beego.NSNamespace("/auditoria_login",
 			beego.NSInclude(
 				&controllers.AuditoriaLoginController{},
+			),
+		),
+
+		beego.NSNamespace("/codigo_verificacion",
+			beego.NSInclude(
+				&controllers.CodigoVerificacionController{},
+			),
+		),
+
+		beego.NSNamespace("/credencial",
+			beego.NSInclude(
+				&controllers.CredencialController{},
+			),
+		),
+
+		beego.NSNamespace("/cuenta_social",
+			beego.NSInclude(
+				&controllers.CuentaSocialController{},
 			),
 		),
 
@@ -29,24 +59,6 @@ func init() {
 		beego.NSNamespace("/tipo_documento",
 			beego.NSInclude(
 				&controllers.TipoDocumentoController{},
-			),
-		),
-
-		beego.NSNamespace("/usuario",
-			beego.NSInclude(
-				&controllers.UsuarioController{},
-			),
-		),
-
-		beego.NSNamespace("/credencial",
-			beego.NSInclude(
-				&controllers.CredencialController{},
-			),
-		),
-
-		beego.NSNamespace("/usuario_rol",
-			beego.NSInclude(
-				&controllers.UsuarioRolController{},
 			),
 		),
 	)

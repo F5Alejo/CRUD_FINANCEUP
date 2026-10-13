@@ -14,7 +14,7 @@ type ConversacionUsuarioAsesor struct {
 	Id                int             `orm:"column(id_conversacion);pk;auto"`
 	IdLead            *Lead           `orm:"column(id_lead);rel(fk)"`
 	IdUsuario         int             `orm:"column(id_usuario)"`
-	IdAsesor          *AsesorBancario `orm:"column(id_asesor);rel(fk);null"`
+	IdAsesor          *AsesorBancario `orm:"column(id_asesor);rel(fk)"`
 	TipoContacto      string          `orm:"column(tipo_contacto)"`
 	Asunto            string          `orm:"column(asunto);null"`
 	Contenido         string          `orm:"column(contenido);null"`

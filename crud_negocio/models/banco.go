@@ -13,12 +13,15 @@ import (
 type Banco struct {
 	Id                 int       `orm:"column(id_banco);pk;auto"`
 	NombreBanco        string    `orm:"column(nombre_banco)"`
+	TipoAliado         string    `orm:"column(tipo_aliado)"`
 	Ciudad             string    `orm:"column(ciudad);null"`
 	Contacto           string    `orm:"column(contacto);null"`
 	Telefono           string    `orm:"column(telefono);null"`
 	Email              string    `orm:"column(email);null"`
 	ComisionPorcentaje float64   `orm:"column(comision_porcentaje);null"`
 	UrlLogo            string    `orm:"column(url_logo);null"`
+	LogoTexto          string    `orm:"column(logo_texto);null"`
+	LogoFondo          string    `orm:"column(logo_fondo);null"`
 	Descripcion        string    `orm:"column(descripcion);null"`
 	SitioWeb           string    `orm:"column(sitio_web);null"`
 	Estado             string    `orm:"column(estado)"`
