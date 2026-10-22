@@ -39,4 +39,5 @@ func init() {
 		),
 	)
 	beego.AddNamespace(ns)
+	beego.Router("/v1/respuesta_pqr", &controllers.RespuestaPqrController{}, "post:Post;get:GetByPqr")
 }
