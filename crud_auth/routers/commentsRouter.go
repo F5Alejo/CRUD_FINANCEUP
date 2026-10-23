@@ -277,4 +277,49 @@ func init() {
             Filters: nil,
             Params: nil})
 
+    beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"],
+        beego.ControllerComments{
+            Method: "Post",
+            Router: `/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"],
+        beego.ControllerComments{
+            Method: "GetAll",
+            Router: `/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"],
+        beego.ControllerComments{
+            Method: "Put",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"put"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CuentaSocialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CuentaSocialController"],
+        beego.ControllerComments{
+            Method: "Post",
+            Router: `/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CuentaSocialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CuentaSocialController"],
+        beego.ControllerComments{
+            Method: "GetAll",
+            Router: `/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
 }

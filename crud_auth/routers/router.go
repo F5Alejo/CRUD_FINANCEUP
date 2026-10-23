@@ -44,6 +44,18 @@ func init() {
 			),
 		),
 
+		beego.NSNamespace("/codigo_verificacion",
+			beego.NSInclude(
+				&controllers.CodigoVerificacionController{},
+			),
+		),
+
+		beego.NSNamespace("/cuenta_social",
+			beego.NSInclude(
+				&controllers.CuentaSocialController{},
+			),
+		),
+
 		beego.NSNamespace("/usuario_rol",
 			beego.NSInclude(
 				&controllers.UsuarioRolController{},
