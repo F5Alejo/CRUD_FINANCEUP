@@ -52,231 +52,6 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"],
-        beego.ControllerComments{
-            Method: "Post",
-            Router: `/`,
-            AllowHTTPMethods: []string{"post"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"],
-        beego.ControllerComments{
-            Method: "GetAll",
-            Router: `/`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"],
-        beego.ControllerComments{
-            Method: "GetOne",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"],
-        beego.ControllerComments{
-            Method: "Put",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"put"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"],
-        beego.ControllerComments{
-            Method: "Delete",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"delete"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:RolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:RolController"],
-        beego.ControllerComments{
-            Method: "Post",
-            Router: `/`,
-            AllowHTTPMethods: []string{"post"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:RolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:RolController"],
-        beego.ControllerComments{
-            Method: "GetAll",
-            Router: `/`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:RolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:RolController"],
-        beego.ControllerComments{
-            Method: "GetOne",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:RolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:RolController"],
-        beego.ControllerComments{
-            Method: "Put",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"put"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:RolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:RolController"],
-        beego.ControllerComments{
-            Method: "Delete",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"delete"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"],
-        beego.ControllerComments{
-            Method: "Post",
-            Router: `/`,
-            AllowHTTPMethods: []string{"post"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"],
-        beego.ControllerComments{
-            Method: "GetAll",
-            Router: `/`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"],
-        beego.ControllerComments{
-            Method: "GetOne",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"],
-        beego.ControllerComments{
-            Method: "Put",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"put"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"],
-        beego.ControllerComments{
-            Method: "Delete",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"delete"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"],
-        beego.ControllerComments{
-            Method: "Post",
-            Router: `/`,
-            AllowHTTPMethods: []string{"post"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"],
-        beego.ControllerComments{
-            Method: "GetAll",
-            Router: `/`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"],
-        beego.ControllerComments{
-            Method: "GetOne",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"],
-        beego.ControllerComments{
-            Method: "Put",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"put"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"],
-        beego.ControllerComments{
-            Method: "Delete",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"delete"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"],
-        beego.ControllerComments{
-            Method: "Post",
-            Router: `/`,
-            AllowHTTPMethods: []string{"post"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"],
-        beego.ControllerComments{
-            Method: "GetAll",
-            Router: `/`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"],
-        beego.ControllerComments{
-            Method: "GetOne",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"],
-        beego.ControllerComments{
-            Method: "Put",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"put"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"],
-        beego.ControllerComments{
-            Method: "Delete",
-            Router: `/:id`,
-            AllowHTTPMethods: []string{"delete"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
     beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"],
         beego.ControllerComments{
             Method: "Post",
@@ -297,9 +72,72 @@ func init() {
 
     beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"],
         beego.ControllerComments{
+            Method: "GetOne",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"],
+        beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
             AllowHTTPMethods: []string{"put"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CodigoVerificacionController"],
+        beego.ControllerComments{
+            Method: "Delete",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"],
+        beego.ControllerComments{
+            Method: "Post",
+            Router: `/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"],
+        beego.ControllerComments{
+            Method: "GetAll",
+            Router: `/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"],
+        beego.ControllerComments{
+            Method: "GetOne",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"],
+        beego.ControllerComments{
+            Method: "Put",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"put"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CredencialController"],
+        beego.ControllerComments{
+            Method: "Delete",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"delete"},
             MethodParams: param.Make(),
             Filters: nil,
             Params: nil})
@@ -318,6 +156,213 @@ func init() {
             Method: "GetAll",
             Router: `/`,
             AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CuentaSocialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CuentaSocialController"],
+        beego.ControllerComments{
+            Method: "GetOne",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CuentaSocialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CuentaSocialController"],
+        beego.ControllerComments{
+            Method: "Put",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"put"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:CuentaSocialController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:CuentaSocialController"],
+        beego.ControllerComments{
+            Method: "Delete",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:RolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:RolController"],
+        beego.ControllerComments{
+            Method: "Post",
+            Router: `/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:RolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:RolController"],
+        beego.ControllerComments{
+            Method: "GetAll",
+            Router: `/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:RolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:RolController"],
+        beego.ControllerComments{
+            Method: "GetOne",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:RolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:RolController"],
+        beego.ControllerComments{
+            Method: "Put",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"put"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:RolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:RolController"],
+        beego.ControllerComments{
+            Method: "Delete",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"],
+        beego.ControllerComments{
+            Method: "Post",
+            Router: `/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"],
+        beego.ControllerComments{
+            Method: "GetAll",
+            Router: `/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"],
+        beego.ControllerComments{
+            Method: "GetOne",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"],
+        beego.ControllerComments{
+            Method: "Put",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"put"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:TipoDocumentoController"],
+        beego.ControllerComments{
+            Method: "Delete",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"],
+        beego.ControllerComments{
+            Method: "Post",
+            Router: `/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"],
+        beego.ControllerComments{
+            Method: "GetAll",
+            Router: `/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"],
+        beego.ControllerComments{
+            Method: "GetOne",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"],
+        beego.ControllerComments{
+            Method: "Put",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"put"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioController"],
+        beego.ControllerComments{
+            Method: "Delete",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"],
+        beego.ControllerComments{
+            Method: "Post",
+            Router: `/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"],
+        beego.ControllerComments{
+            Method: "GetAll",
+            Router: `/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"],
+        beego.ControllerComments{
+            Method: "GetOne",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"],
+        beego.ControllerComments{
+            Method: "Put",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"put"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"] = append(beego.GlobalControllerRouter["crud_auth/controllers:UsuarioRolController"],
+        beego.ControllerComments{
+            Method: "Delete",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"delete"},
             MethodParams: param.Make(),
             Filters: nil,
             Params: nil})

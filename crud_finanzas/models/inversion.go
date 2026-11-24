@@ -13,12 +13,14 @@ import (
 type Inversion struct {
 	Id                 int                  `orm:"column(id_inversion);pk;auto"`
 	IdUsuario          int                  `orm:"column(id_usuario)"`
-	IdTipoInversion    *TipoInversion       `orm:"column(id_tipo_inversion);rel(fk)"`
+	IdTipoInversion    *TipoInversion       `orm:"column(id_tipo_inversion);rel(fk);null"`
 	IdNivelRiesgo      *NivelRiesgo         `orm:"column(id_nivel_riesgo);rel(fk)"`
 	IdMovimientoDinero *MovimientoInversion `orm:"column(id_movimiento_dinero);rel(fk);null"`
 	Nombre             string               `orm:"column(nombre);null"`
 	Monto              float64              `orm:"column(monto);null"`
 	Rentabilidad       float64              `orm:"column(rentabilidad);null"`
+	Rendimiento        float64              `orm:"column(rendimiento);null"`
+	Duracion           string               `orm:"column(duracion);null"`
 	FechaInicio        time.Time            `orm:"column(fecha_inicio);type(date);null"`
 	FechaFin           time.Time            `orm:"column(fecha_fin);type(date);null"`
 	Activo             bool                 `orm:"column(activo)"`

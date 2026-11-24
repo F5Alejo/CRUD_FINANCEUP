@@ -884,6 +884,381 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
+  /producto_detalle/:
+    get:
+      tags:
+      - producto_detalle
+      description: |-
+        get ProductoDetalle
+        <br>
+      operationId: ProductoDetalleController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ProductoDetalle'
+        "403":
+          description: ""
+    post:
+      tags:
+      - producto_detalle
+      description: |-
+        create ProductoDetalle
+        <br>
+      operationId: ProductoDetalleController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for ProductoDetalle content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ProductoDetalle'
+      responses:
+        "201":
+          description: '{int} models.ProductoDetalle'
+        "403":
+          description: body is empty
+  /producto_detalle/{id}:
+    get:
+      tags:
+      - producto_detalle
+      description: |-
+        get ProductoDetalle by id
+        <br>
+      operationId: ProductoDetalleController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ProductoDetalle'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - producto_detalle
+      description: |-
+        update the ProductoDetalle
+        <br>
+      operationId: ProductoDetalleController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for ProductoDetalle content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ProductoDetalle'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ProductoDetalle'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - producto_detalle
+      description: |-
+        delete the ProductoDetalle
+        <br>
+      operationId: ProductoDetalleController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /producto_pregunta/:
+    get:
+      tags:
+      - producto_pregunta
+      description: |-
+        get ProductoPregunta
+        <br>
+      operationId: ProductoPreguntaController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ProductoPregunta'
+        "403":
+          description: ""
+    post:
+      tags:
+      - producto_pregunta
+      description: |-
+        create ProductoPregunta
+        <br>
+      operationId: ProductoPreguntaController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for ProductoPregunta content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ProductoPregunta'
+      responses:
+        "201":
+          description: '{int} models.ProductoPregunta'
+        "403":
+          description: body is empty
+  /producto_pregunta/{id}:
+    get:
+      tags:
+      - producto_pregunta
+      description: |-
+        get ProductoPregunta by id
+        <br>
+      operationId: ProductoPreguntaController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ProductoPregunta'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - producto_pregunta
+      description: |-
+        update the ProductoPregunta
+        <br>
+      operationId: ProductoPreguntaController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for ProductoPregunta content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ProductoPregunta'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ProductoPregunta'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - producto_pregunta
+      description: |-
+        delete the ProductoPregunta
+        <br>
+      operationId: ProductoPreguntaController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /producto_tarifa/:
+    get:
+      tags:
+      - producto_tarifa
+      description: |-
+        get ProductoTarifa
+        <br>
+      operationId: ProductoTarifaController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ProductoTarifa'
+        "403":
+          description: ""
+    post:
+      tags:
+      - producto_tarifa
+      description: |-
+        create ProductoTarifa
+        <br>
+      operationId: ProductoTarifaController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for ProductoTarifa content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ProductoTarifa'
+      responses:
+        "201":
+          description: '{int} models.ProductoTarifa'
+        "403":
+          description: body is empty
+  /producto_tarifa/{id}:
+    get:
+      tags:
+      - producto_tarifa
+      description: |-
+        get ProductoTarifa by id
+        <br>
+      operationId: ProductoTarifaController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ProductoTarifa'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - producto_tarifa
+      description: |-
+        update the ProductoTarifa
+        <br>
+      operationId: ProductoTarifaController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for ProductoTarifa content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ProductoTarifa'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ProductoTarifa'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - producto_tarifa
+      description: |-
+        delete the ProductoTarifa
+        <br>
+      operationId: ProductoTarifaController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
   /transaccion_comision/:
     get:
       tags:
@@ -1068,11 +1443,17 @@ definitions:
       Id:
         type: integer
         format: int64
+      LogoFondo:
+        type: string
+      LogoTexto:
+        type: string
       NombreBanco:
         type: string
       SitioWeb:
         type: string
       Telefono:
+        type: string
+      TipoAliado:
         type: string
       UrlLogo:
         type: string
@@ -1186,8 +1567,16 @@ definitions:
     title: Lead
     type: object
     properties:
+      AceptaTerminos:
+        type: boolean
       Activo:
         type: boolean
+      CelularSolicitante:
+        type: string
+      CorreoSolicitante:
+        type: string
+      DocumentoSolicitante:
+        type: string
       EstadoLead:
         type: string
       FechaContacto:
@@ -1212,14 +1601,21 @@ definitions:
       IdUsuario:
         type: integer
         format: int64
+      IngresosMensuales:
+        type: number
+        format: double
       MontoInteres:
         type: number
         format: double
+      NombreSolicitante:
+        type: string
       Observaciones:
         type: string
       PlazoInteres:
         type: integer
         format: int64
+      Radicado:
+        type: string
       TipoCredito:
         type: string
   models.ProductoCrediticio:
@@ -1228,7 +1624,23 @@ definitions:
     properties:
       Activo:
         type: boolean
+      Beneficio:
+        type: string
+      Calificacion:
+        type: number
+        format: double
+      Compatibilidad:
+        type: integer
+        format: int64
+      CtaPrimaria:
+        type: string
+      CtaSecundaria:
+        type: string
       Descripcion:
+        type: string
+      Destacada:
+        type: boolean
+      Familia:
         type: string
       FechaCreacion:
         type: string
@@ -1255,7 +1667,11 @@ definitions:
       PlazoMinimo:
         type: integer
         format: int64
+      Promesa:
+        type: string
       Requisitos:
+        type: string
+      Slug:
         type: string
       TasaMaxima:
         type: number
@@ -1263,6 +1679,85 @@ definitions:
       TasaMinima:
         type: number
         format: double
+      TiempoAprobacion:
+        type: string
+      Usuarios:
+        type: integer
+        format: int64
+      Vigencia:
+        type: string
+  models.ProductoDetalle:
+    title: ProductoDetalle
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      IdProducto:
+        $ref: '#/definitions/models.ProductoCrediticio'
+      Orden:
+        type: integer
+        format: int64
+      Texto:
+        type: string
+      Tipo:
+        type: string
+  models.ProductoPregunta:
+    title: ProductoPregunta
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      IdProducto:
+        $ref: '#/definitions/models.ProductoCrediticio'
+      Orden:
+        type: integer
+        format: int64
+      Pregunta:
+        type: string
+      Respuesta:
+        type: string
+  models.ProductoTarifa:
+    title: ProductoTarifa
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      Concepto:
+        type: string
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      IdProducto:
+        $ref: '#/definitions/models.ProductoCrediticio'
+      Orden:
+        type: integer
+        format: int64
+      Valor:
+        type: string
   models.TransaccionComision:
     title: TransaccionComision
     type: object
@@ -1296,27 +1791,36 @@ definitions:
       ReferenciaPago:
         type: string
 tags:
-- name: banco
-  description: |
-    BancoController operations for Banco
-- name: producto_crediticio
-  description: |
-    ProductoCrediticioController operations for ProductoCrediticio
 - name: asesor_bancario
   description: |
     AsesorBancarioController operations for AsesorBancario
-- name: contacto_asesor
+- name: banco
   description: |
-    ContactoAsesorController operations for ContactoAsesor
-- name: lead
-  description: |
-    LeadController operations for Lead
+    BancoController operations for Banco
 - name: conversacion_usuario_asesor
   description: |
     ConversacionUsuarioAsesorController operations for ConversacionUsuarioAsesor
 - name: credito_desembolsado
   description: |
     CreditoDesembolsadoController operations for CreditoDesembolsado
+- name: lead
+  description: |
+    LeadController operations for Lead
+- name: producto_crediticio
+  description: |
+    ProductoCrediticioController operations for ProductoCrediticio
+- name: producto_detalle
+  description: |
+    ProductoDetalleController operations for ProductoDetalle
+- name: contacto_asesor
+  description: |
+    ContactoAsesorController operations for ContactoAsesor
+- name: producto_pregunta
+  description: |
+    ProductoPreguntaController operations for ProductoPregunta
+- name: producto_tarifa
+  description: |
+    ProductoTarifaController operations for ProductoTarifa
 - name: transaccion_comision
   description: |
     TransaccionComisionController operations for TransaccionComision

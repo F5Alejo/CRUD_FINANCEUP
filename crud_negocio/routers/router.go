@@ -14,33 +14,15 @@ import (
 func init() {
 	ns := beego.NewNamespace("/v1",
 
-		beego.NSNamespace("/banco",
-			beego.NSInclude(
-				&controllers.BancoController{},
-			),
-		),
-
-		beego.NSNamespace("/producto_crediticio",
-			beego.NSInclude(
-				&controllers.ProductoCrediticioController{},
-			),
-		),
-
 		beego.NSNamespace("/asesor_bancario",
 			beego.NSInclude(
 				&controllers.AsesorBancarioController{},
 			),
 		),
 
-		beego.NSNamespace("/contacto_asesor",
+		beego.NSNamespace("/banco",
 			beego.NSInclude(
-				&controllers.ContactoAsesorController{},
-			),
-		),
-
-		beego.NSNamespace("/lead",
-			beego.NSInclude(
-				&controllers.LeadController{},
+				&controllers.BancoController{},
 			),
 		),
 
@@ -53,6 +35,42 @@ func init() {
 		beego.NSNamespace("/credito_desembolsado",
 			beego.NSInclude(
 				&controllers.CreditoDesembolsadoController{},
+			),
+		),
+
+		beego.NSNamespace("/lead",
+			beego.NSInclude(
+				&controllers.LeadController{},
+			),
+		),
+
+		beego.NSNamespace("/producto_crediticio",
+			beego.NSInclude(
+				&controllers.ProductoCrediticioController{},
+			),
+		),
+
+		beego.NSNamespace("/producto_detalle",
+			beego.NSInclude(
+				&controllers.ProductoDetalleController{},
+			),
+		),
+
+		beego.NSNamespace("/contacto_asesor",
+			beego.NSInclude(
+				&controllers.ContactoAsesorController{},
+			),
+		),
+
+		beego.NSNamespace("/producto_pregunta",
+			beego.NSInclude(
+				&controllers.ProductoPreguntaController{},
+			),
+		),
+
+		beego.NSNamespace("/producto_tarifa",
+			beego.NSInclude(
+				&controllers.ProductoTarifaController{},
 			),
 		),
 

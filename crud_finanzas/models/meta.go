@@ -13,7 +13,7 @@ import (
 type Meta struct {
 	Id                 int             `orm:"column(id_meta);pk;auto"`
 	IdUsuario          int             `orm:"column(id_usuario)"`
-	IdEditarMeta       *EditarMeta     `orm:"column(id_editar_meta);rel(fk)"`
+	IdEditarMeta       *EditarMeta     `orm:"column(id_editar_meta);rel(fk);null"`
 	IdMovimientoDinero *MovimientoMeta `orm:"column(id_movimiento_dinero);rel(fk);null"`
 	Nombre             string          `orm:"column(nombre);null"`
 	Descripcion        string          `orm:"column(descripcion);null"`

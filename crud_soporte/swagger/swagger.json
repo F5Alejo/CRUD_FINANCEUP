@@ -531,6 +531,179 @@
                 }
             }
         },
+        "/pregunta_frecuente/": {
+            "get": {
+                "tags": [
+                    "pregunta_frecuente"
+                ],
+                "description": "get PreguntaFrecuente\n\u003cbr\u003e",
+                "operationId": "PreguntaFrecuenteController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PreguntaFrecuente"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pregunta_frecuente"
+                ],
+                "description": "create PreguntaFrecuente\n\u003cbr\u003e",
+                "operationId": "PreguntaFrecuenteController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PreguntaFrecuente content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PreguntaFrecuente"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PreguntaFrecuente"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pregunta_frecuente/{id}": {
+            "get": {
+                "tags": [
+                    "pregunta_frecuente"
+                ],
+                "description": "get PreguntaFrecuente by id\n\u003cbr\u003e",
+                "operationId": "PreguntaFrecuenteController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PreguntaFrecuente"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pregunta_frecuente"
+                ],
+                "description": "update the PreguntaFrecuente\n\u003cbr\u003e",
+                "operationId": "PreguntaFrecuenteController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PreguntaFrecuente content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PreguntaFrecuente"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PreguntaFrecuente"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pregunta_frecuente"
+                ],
+                "description": "delete the PreguntaFrecuente\n\u003cbr\u003e",
+                "operationId": "PreguntaFrecuenteController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
         "/registro_actividad/": {
             "get": {
                 "tags": [
@@ -703,6 +876,179 @@
                     }
                 }
             }
+        },
+        "/respuesta_pqr/": {
+            "get": {
+                "tags": [
+                    "respuesta_pqr"
+                ],
+                "description": "get RespuestaPqr\n\u003cbr\u003e",
+                "operationId": "RespuestaPqrController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RespuestaPqr"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "respuesta_pqr"
+                ],
+                "description": "create RespuestaPqr\n\u003cbr\u003e",
+                "operationId": "RespuestaPqrController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for RespuestaPqr content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.RespuestaPqr"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.RespuestaPqr"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/respuesta_pqr/{id}": {
+            "get": {
+                "tags": [
+                    "respuesta_pqr"
+                ],
+                "description": "get RespuestaPqr by id\n\u003cbr\u003e",
+                "operationId": "RespuestaPqrController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RespuestaPqr"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "respuesta_pqr"
+                ],
+                "description": "update the RespuestaPqr\n\u003cbr\u003e",
+                "operationId": "RespuestaPqrController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for RespuestaPqr content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.RespuestaPqr"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RespuestaPqr"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "respuesta_pqr"
+                ],
+                "description": "delete the RespuestaPqr\n\u003cbr\u003e",
+                "operationId": "RespuestaPqrController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -815,6 +1161,10 @@
                 "Prioridad": {
                     "type": "string"
                 },
+                "Progreso": {
+                    "type": "integer",
+                    "format": "int64"
+                },
                 "Radicado": {
                     "type": "string"
                 },
@@ -823,6 +1173,48 @@
                 },
                 "Titulo": {
                     "type": "string"
+                }
+            }
+        },
+        "models.PreguntaFrecuente": {
+            "title": "PreguntaFrecuente",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "Categoria": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "FechaModificacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "LecturaMinutos": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Orden": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Pregunta": {
+                    "type": "string"
+                },
+                "Respuesta": {
+                    "type": "string"
+                },
+                "Utilidad": {
+                    "type": "integer",
+                    "format": "int64"
                 }
             }
         },
@@ -856,16 +1248,58 @@
                     "type": "string"
                 }
             }
+        },
+        "models.RespuestaPqr": {
+            "title": "RespuestaPqr",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "Autor": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "FechaModificacion": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "FechaRespuesta": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "IdPqr": {
+                    "$ref": "#/definitions/models.Pqr"
+                },
+                "IdUsuario": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Mensaje": {
+                    "type": "string"
+                }
+            }
         }
     },
     "tags": [
         {
-            "name": "adjunto",
-            "description": "AdjuntoController operations for Adjunto\n"
-        },
-        {
             "name": "registro_actividad",
             "description": "RegistroActividadController operations for RegistroActividad\n"
+        },
+        {
+            "name": "respuesta_pqr",
+            "description": "RespuestaPqrController operations for RespuestaPqr\n"
+        },
+        {
+            "name": "adjunto",
+            "description": "AdjuntoController operations for Adjunto\n"
         },
         {
             "name": "estado_pqr",
@@ -874,6 +1308,10 @@
         {
             "name": "pqr",
             "description": "PqrController operations for Pqr\n"
+        },
+        {
+            "name": "pregunta_frecuente",
+            "description": "PreguntaFrecuenteController operations for PreguntaFrecuente\n"
         }
     ]
 }

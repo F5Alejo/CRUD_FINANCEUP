@@ -20,6 +20,7 @@ type Pqr struct {
 	Prioridad         string     `orm:"column(prioridad)"`
 	Asesor            string     `orm:"column(asesor);null"`
 	MensajeRespuesta  string     `orm:"column(mensaje_respuesta);null"`
+	Progreso          int        `orm:"column(progreso)"`
 	Descripcion       string     `orm:"column(descripcion)"`
 	IdEstado          *EstadoPqr `orm:"column(id_estado);rel(fk)"`
 	Activo            bool       `orm:"column(activo)"`

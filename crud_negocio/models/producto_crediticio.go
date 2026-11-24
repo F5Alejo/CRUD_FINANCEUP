@@ -13,8 +13,13 @@ import (
 type ProductoCrediticio struct {
 	Id                int       `orm:"column(id_producto);pk;auto"`
 	IdBanco           *Banco    `orm:"column(id_banco);rel(fk)"`
+	Slug              string    `orm:"column(slug);null"`
 	NombreProducto    string    `orm:"column(nombre_producto)"`
+	Familia           string    `orm:"column(familia);null"`
+	Beneficio         string    `orm:"column(beneficio);null"`
 	Descripcion       string    `orm:"column(descripcion);null"`
+	Promesa           string    `orm:"column(promesa);null"`
+	Vigencia          string    `orm:"column(vigencia);null"`
 	MontoMinimo       float64   `orm:"column(monto_minimo);null"`
 	MontoMaximo       float64   `orm:"column(monto_maximo);null"`
 	TasaMinima        float64   `orm:"column(tasa_minima);null"`
@@ -22,6 +27,13 @@ type ProductoCrediticio struct {
 	PlazoMinimo       int       `orm:"column(plazo_minimo);null"`
 	PlazoMaximo       int       `orm:"column(plazo_maximo);null"`
 	Requisitos        string    `orm:"column(requisitos);null"`
+	TiempoAprobacion  string    `orm:"column(tiempo_aprobacion);null"`
+	Calificacion      float64   `orm:"column(calificacion);null"`
+	Usuarios          int       `orm:"column(usuarios)"`
+	Compatibilidad    int       `orm:"column(compatibilidad);null"`
+	Destacada         bool      `orm:"column(destacada)"`
+	CtaPrimaria       string    `orm:"column(cta_primaria);null"`
+	CtaSecundaria     string    `orm:"column(cta_secundaria);null"`
 	Activo            bool      `orm:"column(activo)"`
 	FechaCreacion     time.Time `orm:"column(fecha_creacion);type(timestamp without time zone);auto_now_add"`
 	FechaModificacion time.Time `orm:"column(fecha_modificacion);type(timestamp without time zone);auto_now"`

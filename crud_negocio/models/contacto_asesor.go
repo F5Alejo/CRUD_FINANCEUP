@@ -12,7 +12,7 @@ import (
 
 type ContactoAsesor struct {
 	Id                int             `orm:"column(id_contacto);pk;auto"`
-	IdAsesor          *AsesorBancario `orm:"column(id_asesor);rel(fk);null"`
+	IdAsesor          *AsesorBancario `orm:"column(id_asesor);rel(fk)"`
 	Whatsapp          string          `orm:"column(whatsapp);null"`
 	Email             string          `orm:"column(email);null"`
 	Telefono          string          `orm:"column(telefono);null"`

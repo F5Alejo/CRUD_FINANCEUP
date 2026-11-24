@@ -11,20 +11,27 @@ import (
 )
 
 type Lead struct {
-	Id                int                 `orm:"column(id_lead);pk;auto"`
-	IdUsuario         int                 `orm:"column(id_usuario)"`
-	IdProducto        *ProductoCrediticio `orm:"column(id_producto);rel(fk)"`
-	IdAsesor          *AsesorBancario     `orm:"column(id_asesor);rel(fk);null"`
-	TipoCredito       string              `orm:"column(tipo_credito);null"`
-	MontoInteres      float64             `orm:"column(monto_interes);null"`
-	PlazoInteres      int                 `orm:"column(plazo_interes);null"`
-	EstadoLead        string              `orm:"column(estado_lead)"`
-	FechaGeneracion   time.Time           `orm:"column(fecha_generacion);type(timestamp without time zone);null;auto_now_add"`
-	FechaContacto     time.Time           `orm:"column(fecha_contacto);type(timestamp without time zone);null"`
-	Observaciones     string              `orm:"column(observaciones);null"`
-	Activo            bool                `orm:"column(activo)"`
-	FechaCreacion     time.Time           `orm:"column(fecha_creacion);type(timestamp without time zone);auto_now_add"`
-	FechaModificacion time.Time           `orm:"column(fecha_modificacion);type(timestamp without time zone);auto_now"`
+	Id                   int                 `orm:"column(id_lead);pk;auto"`
+	IdUsuario            int                 `orm:"column(id_usuario)"`
+	IdProducto           *ProductoCrediticio `orm:"column(id_producto);rel(fk)"`
+	IdAsesor             *AsesorBancario     `orm:"column(id_asesor);rel(fk);null"`
+	Radicado             string              `orm:"column(radicado);null"`
+	TipoCredito          string              `orm:"column(tipo_credito);null"`
+	MontoInteres         float64             `orm:"column(monto_interes);null"`
+	PlazoInteres         int                 `orm:"column(plazo_interes);null"`
+	NombreSolicitante    string              `orm:"column(nombre_solicitante);null"`
+	DocumentoSolicitante string              `orm:"column(documento_solicitante);null"`
+	CorreoSolicitante    string              `orm:"column(correo_solicitante);null"`
+	CelularSolicitante   string              `orm:"column(celular_solicitante);null"`
+	IngresosMensuales    float64             `orm:"column(ingresos_mensuales);null"`
+	AceptaTerminos       bool                `orm:"column(acepta_terminos)"`
+	EstadoLead           string              `orm:"column(estado_lead)"`
+	FechaGeneracion      time.Time           `orm:"column(fecha_generacion);type(timestamp without time zone);null;auto_now_add"`
+	FechaContacto        time.Time           `orm:"column(fecha_contacto);type(timestamp without time zone);null"`
+	Observaciones        string              `orm:"column(observaciones);null"`
+	Activo               bool                `orm:"column(activo)"`
+	FechaCreacion        time.Time           `orm:"column(fecha_creacion);type(timestamp without time zone);auto_now_add"`
+	FechaModificacion    time.Time           `orm:"column(fecha_modificacion);type(timestamp without time zone);auto_now"`
 }
 
 func (t *Lead) TableName() string {

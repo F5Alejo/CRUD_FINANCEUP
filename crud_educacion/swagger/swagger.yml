@@ -9,6 +9,131 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 basePath: /v1
 paths:
+  /certificado/:
+    get:
+      tags:
+      - certificado
+      description: |-
+        get Certificado
+        <br>
+      operationId: CertificadoController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Certificado'
+        "403":
+          description: ""
+    post:
+      tags:
+      - certificado
+      description: |-
+        create Certificado
+        <br>
+      operationId: CertificadoController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Certificado content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Certificado'
+      responses:
+        "201":
+          description: '{int} models.Certificado'
+        "403":
+          description: body is empty
+  /certificado/{id}:
+    get:
+      tags:
+      - certificado
+      description: |-
+        get Certificado by id
+        <br>
+      operationId: CertificadoController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Certificado'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - certificado
+      description: |-
+        update the Certificado
+        <br>
+      operationId: CertificadoController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Certificado content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Certificado'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Certificado'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - certificado
+      description: |-
+        delete the Certificado
+        <br>
+      operationId: CertificadoController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
   /contenido/:
     get:
       tags:
@@ -134,6 +259,256 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
+  /escuela/:
+    get:
+      tags:
+      - escuela
+      description: |-
+        get Escuela
+        <br>
+      operationId: EscuelaController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Escuela'
+        "403":
+          description: ""
+    post:
+      tags:
+      - escuela
+      description: |-
+        create Escuela
+        <br>
+      operationId: EscuelaController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Escuela content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Escuela'
+      responses:
+        "201":
+          description: '{int} models.Escuela'
+        "403":
+          description: body is empty
+  /escuela/{id}:
+    get:
+      tags:
+      - escuela
+      description: |-
+        get Escuela by id
+        <br>
+      operationId: EscuelaController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Escuela'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - escuela
+      description: |-
+        update the Escuela
+        <br>
+      operationId: EscuelaController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Escuela content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Escuela'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Escuela'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - escuela
+      description: |-
+        delete the Escuela
+        <br>
+      operationId: EscuelaController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /instructor/:
+    get:
+      tags:
+      - instructor
+      description: |-
+        get Instructor
+        <br>
+      operationId: InstructorController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Instructor'
+        "403":
+          description: ""
+    post:
+      tags:
+      - instructor
+      description: |-
+        create Instructor
+        <br>
+      operationId: InstructorController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Instructor content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Instructor'
+      responses:
+        "201":
+          description: '{int} models.Instructor'
+        "403":
+          description: body is empty
+  /instructor/{id}:
+    get:
+      tags:
+      - instructor
+      description: |-
+        get Instructor by id
+        <br>
+      operationId: InstructorController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Instructor'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - instructor
+      description: |-
+        update the Instructor
+        <br>
+      operationId: InstructorController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Instructor content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Instructor'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Instructor'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - instructor
+      description: |-
+        delete the Instructor
+        <br>
+      operationId: InstructorController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
   /leccion/:
     get:
       tags:
@@ -248,6 +623,131 @@ paths:
         delete the Leccion
         <br>
       operationId: LeccionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /modulo_detalle/:
+    get:
+      tags:
+      - modulo_detalle
+      description: |-
+        get ModuloDetalle
+        <br>
+      operationId: ModuloDetalleController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ModuloDetalle'
+        "403":
+          description: ""
+    post:
+      tags:
+      - modulo_detalle
+      description: |-
+        create ModuloDetalle
+        <br>
+      operationId: ModuloDetalleController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for ModuloDetalle content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ModuloDetalle'
+      responses:
+        "201":
+          description: '{int} models.ModuloDetalle'
+        "403":
+          description: body is empty
+  /modulo_detalle/{id}:
+    get:
+      tags:
+      - modulo_detalle
+      description: |-
+        get ModuloDetalle by id
+        <br>
+      operationId: ModuloDetalleController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ModuloDetalle'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - modulo_detalle
+      description: |-
+        update the ModuloDetalle
+        <br>
+      operationId: ModuloDetalleController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for ModuloDetalle content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ModuloDetalle'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ModuloDetalle'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - modulo_detalle
+      description: |-
+        delete the ModuloDetalle
+        <br>
+      operationId: ModuloDetalleController.Delete
       parameters:
       - in: path
         name: id
@@ -635,6 +1135,31 @@ paths:
         "403":
           description: id is empty
 definitions:
+  models.Certificado:
+    title: Certificado
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoVerificacion:
+        type: string
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaEmision:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      IdModulo:
+        $ref: '#/definitions/models.ModuloEducativo'
+      IdUsuario:
+        type: integer
+        format: int64
   models.Contenido:
     title: Contenido
     type: object
@@ -658,6 +1183,51 @@ definitions:
       Titulo:
         type: string
       UrlVideo:
+        type: string
+  models.Escuela:
+    title: Escuela
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      Descripcion:
+        type: string
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      Orden:
+        type: integer
+        format: int64
+      Slug:
+        type: string
+  models.Instructor:
+    title: Instructor
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      Cargo:
+        type: string
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      Iniciales:
+        type: string
+      Nombre:
         type: string
   models.Leccion:
     title: Leccion
@@ -686,20 +1256,20 @@ definitions:
       NumeroLeccion:
         type: integer
         format: int64
+      Slug:
+        type: string
+      Tipo:
+        type: string
       Titulo:
         type: string
       UrlVideo:
         type: string
-  models.ModuloEducativo:
-    title: ModuloEducativo
+  models.ModuloDetalle:
+    title: ModuloDetalle
     type: object
     properties:
       Activo:
         type: boolean
-      Contenido:
-        type: string
-      Descripcion:
-        type: string
       FechaCreacion:
         type: string
         format: datetime
@@ -709,7 +1279,57 @@ definitions:
       Id:
         type: integer
         format: int64
+      IdModulo:
+        $ref: '#/definitions/models.ModuloEducativo'
+      Orden:
+        type: integer
+        format: int64
+      Texto:
+        type: string
+      Tipo:
+        type: string
+  models.ModuloEducativo:
+    title: ModuloEducativo
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      Calificacion:
+        type: number
+        format: double
+      Categoria:
+        type: string
+      Contenido:
+        type: string
+      Descripcion:
+        type: string
+      Duracion:
+        type: string
+      Estudiantes:
+        type: integer
+        format: int64
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Formato:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      IdEscuela:
+        $ref: '#/definitions/models.Escuela'
+      IdInstructor:
+        $ref: '#/definitions/models.Instructor'
       Nivel:
+        type: string
+      OtorgaCertificado:
+        type: boolean
+      ResumenLecciones:
+        type: string
+      Slug:
         type: string
       Titulo:
         type: string
@@ -776,18 +1396,30 @@ definitions:
         type: integer
         format: int64
 tags:
-- name: modulo_educativo
+- name: escuela
   description: |
-    ModuloEducativoController operations for ModuloEducativo
-- name: contenido
+    EscuelaController operations for Escuela
+- name: instructor
   description: |
-    ContenidoController operations for Contenido
+    InstructorController operations for Instructor
 - name: leccion
   description: |
     LeccionController operations for Leccion
+- name: modulo_detalle
+  description: |
+    ModuloDetalleController operations for ModuloDetalle
+- name: certificado
+  description: |
+    CertificadoController operations for Certificado
+- name: modulo_educativo
+  description: |
+    ModuloEducativoController operations for ModuloEducativo
 - name: progreso_educativo
   description: |
     ProgresoEducativoController operations for ProgresoEducativo
 - name: progreso_leccion
   description: |
     ProgresoLeccionController operations for ProgresoLeccion
+- name: contenido
+  description: |
+    ContenidoController operations for Contenido

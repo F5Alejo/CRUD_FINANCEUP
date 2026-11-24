@@ -14,7 +14,9 @@ type Leccion struct {
 	Id                int              `orm:"column(id_leccion);pk;auto"`
 	IdModulo          *ModuloEducativo `orm:"column(id_modulo);rel(fk)"`
 	IdContenido       *Contenido       `orm:"column(id_contenido);rel(fk);null"`
+	Slug              string           `orm:"column(slug);null"`
 	Titulo            string           `orm:"column(titulo)"`
+	Tipo              string           `orm:"column(tipo)"`
 	Descripcion       string           `orm:"column(descripcion);null"`
 	DuracionMinutos   int              `orm:"column(duracion_minutos);null"`
 	UrlVideo          string           `orm:"column(url_video);null"`
