@@ -23,6 +23,7 @@ type Usuario struct {
 	FechaNacimiento         time.Time      `orm:"column(fecha_nacimiento);type(date);null"`
 	AceptaTerminos          bool           `orm:"column(acepta_terminos)"`
 	FechaAceptacionTerminos time.Time      `orm:"column(fecha_aceptacion_terminos);type(timestamp without time zone);null"`
+	VersionPolitica         string         `orm:"column(version_politica);null"` // version de la politica de datos aceptada
 	Estado                  string         `orm:"column(estado)"`
 	FechaRegistro           time.Time      `orm:"column(fecha_registro);type(timestamp without time zone);null;auto_now_add"`
 	FechaUltimaSesion       time.Time      `orm:"column(fecha_ultima_sesion);type(timestamp without time zone);null"`

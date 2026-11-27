@@ -105,6 +105,7 @@ CREATE TABLE "auth"."usuario" (
     "fecha_nacimiento"    DATE,                               -- AJUSTE CLIENTE
     "acepta_terminos"     BOOLEAN      NOT NULL DEFAULT false, -- AJUSTE CLIENTE: casilla de terminos del registro
     "fecha_aceptacion_terminos" TIMESTAMP,                    -- AJUSTE CLIENTE
+    "version_politica"    VARCHAR(10),                        -- version de la politica de datos que acepto
     "estado"              VARCHAR(20)  NOT NULL DEFAULT 'activo'
                               CHECK (estado IN ('activo','inactivo','suspendido')),
     "fecha_registro"      TIMESTAMP    DEFAULT CURRENT_TIMESTAMP,

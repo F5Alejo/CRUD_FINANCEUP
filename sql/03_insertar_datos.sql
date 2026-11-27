@@ -43,11 +43,11 @@ VALUES
 (3, 'fabian',  'barreto',    'fabian.barreto@email.com',    '3161234567', '6666666666', 'Barranquilla', 'Carrera 50 # 72-10', '1997-09-18', 'activo', true);
 
 -- NUEVO: columnas nuevas de los usuarios de arriba
-UPDATE "auth"."usuario" SET "acepta_terminos" = true, "fecha_aceptacion_terminos" = CURRENT_TIMESTAMP - INTERVAL '90 days' WHERE "id_usuario" = 1;
-UPDATE "auth"."usuario" SET "acepta_terminos" = true, "fecha_aceptacion_terminos" = CURRENT_TIMESTAMP - INTERVAL '80 days' WHERE "id_usuario" = 2;
-UPDATE "auth"."usuario" SET "acepta_terminos" = true, "fecha_aceptacion_terminos" = CURRENT_TIMESTAMP - INTERVAL '70 days' WHERE "id_usuario" = 3;
-UPDATE "auth"."usuario" SET "acepta_terminos" = true, "fecha_aceptacion_terminos" = CURRENT_TIMESTAMP - INTERVAL '60 days' WHERE "id_usuario" = 4;
-UPDATE "auth"."usuario" SET "acepta_terminos" = true, "fecha_aceptacion_terminos" = CURRENT_TIMESTAMP - INTERVAL '50 days' WHERE "id_usuario" = 5;
+UPDATE "auth"."usuario" SET "acepta_terminos" = true, "version_politica" = '1.0', "fecha_aceptacion_terminos" = CURRENT_TIMESTAMP - INTERVAL '90 days' WHERE "id_usuario" = 1;
+UPDATE "auth"."usuario" SET "acepta_terminos" = true, "version_politica" = '1.0', "fecha_aceptacion_terminos" = CURRENT_TIMESTAMP - INTERVAL '80 days' WHERE "id_usuario" = 2;
+UPDATE "auth"."usuario" SET "acepta_terminos" = true, "version_politica" = '1.0', "fecha_aceptacion_terminos" = CURRENT_TIMESTAMP - INTERVAL '70 days' WHERE "id_usuario" = 3;
+UPDATE "auth"."usuario" SET "acepta_terminos" = true, "version_politica" = '1.0', "fecha_aceptacion_terminos" = CURRENT_TIMESTAMP - INTERVAL '60 days' WHERE "id_usuario" = 4;
+UPDATE "auth"."usuario" SET "acepta_terminos" = true, "version_politica" = '1.0', "fecha_aceptacion_terminos" = CURRENT_TIMESTAMP - INTERVAL '50 days' WHERE "id_usuario" = 5;
 
 
 -- auth.credencial
